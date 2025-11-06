@@ -1,0 +1,30 @@
+CREATE TABLE IF NOT EXISTS voters(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    aadharcardno VARCHAR(100) NOT NULL,
+    age INT CHECK (AGE > 18) NOT NULL,
+    email VARCHAR(100),
+    mobile VARCHAR(20),
+    address VARCHAR(255),
+    password VARCHAR(100) NOT NULL,
+    is_voter VARCHAR(20) DEFAULT TRUE,
+)
+
+CREATE TABLE IF NOT EXISTS candidate(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    age INT CHECK (AGE > 18) NOT NULL,
+    party VARCHAR(100) NOT NULL,
+    is_elector BOOLEAN DEFAULT TRUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)
+
+
+CREATE TABLE IF NOT EXISTS votecount(
+    id SERIAL PRIMARY KEY,
+    electorname VARCHAR(20) NOT NULL,
+    aadharcardno VARCHAR(100) NOT NULL,
+    token VARCHAR(250) NOT NULL,
+    voted_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+)
+
