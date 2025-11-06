@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { FaVoteYea, FaInstagram, FaFacebook, FaTwitter, FaBars } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-// import {vidhansouda} from '../assets/vidhansouda.jpg'
+import {vidhansouda} from '../assets/vidhansouda.jpg'
 
 function Homepage() {
   const navigate = useNavigate();
@@ -83,9 +83,11 @@ function Homepage() {
         </nav>
 
         {/* Background Section (blur effect kept same) */}
-        {/* <div className="h-[400px] md:h-[450px] w-full bg-[url(/PERNbased-voting-application/vidhansouda.jpg)] bg-no-repeat bg-center bg-cover blur-[2px] flex justify-center items-center mt-20"></div> */}
-        <div className="h-[400px] md:h-[450px] w-full bg-[url('/PERNbased-voting-application/vidhansouda.jpg')] bg-no-repeat bg-center bg-cover blur-[2px] flex justify-center items-center mt-20"></div>
+        {/* <div className="h-[400px] md:h-[450px] w-full bg-[url('/vidhansouda.jpg)'] bg-no-repeat bg-center bg-cover blur-[2px] flex justify-center items-center mt-20"></div> */}
+
+        <div className="h-[400px] md:h-[450px] w-full  bg-no-repeat bg-center bg-cover blur-[2px] flex justify-center items-center mt-20" style={{ backgroundImage: `url(${vidhansouda})` }}></div>
         {/* Content */}
+
         <div className="text-center px-4 mt-6">
           <div className="text-[40px] font-semibold font-serif">Welcome to VoteHub</div>
           <div className="text-[15px] font-extralight mt-2 font-serif max-w-3xl mx-auto">
